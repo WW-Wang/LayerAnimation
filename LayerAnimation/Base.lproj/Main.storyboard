@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-jD-QJr">
+                                <rect key="frame" x="225" y="520" width="151" height="30"/>
+                                <state key="normal" title="下载图片显示progress"/>
+                                <connections>
+                                    <action selector="downloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csx-yP-SOJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlT-dd-P1R" customClass="ProgressView">
+                                <rect key="frame" x="20" y="502" width="560" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="R5Q-KE-tWz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.0" blue="0.081942766769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-rQ-90D">
+                                <rect key="frame" x="20" y="202" width="560" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="chg-4F-2tA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aXo-rQ-90D" secondAttribute="trailing" constant="20" id="2V8-51-63o"/>
+                            <constraint firstAttribute="trailing" secondItem="VlT-dd-P1R" secondAttribute="trailing" constant="20" id="2d0-Kp-kE5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PMp-jD-QJr" secondAttribute="bottom" constant="50" id="53z-EC-z67"/>
+                            <constraint firstItem="aXo-rQ-90D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7vL-Bo-t5K"/>
+                            <constraint firstItem="VlT-dd-P1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="82J-hi-PGF"/>
+                            <constraint firstItem="VlT-dd-P1R" firstAttribute="top" secondItem="aXo-rQ-90D" secondAttribute="bottom" constant="50" id="NMr-sY-sQJ"/>
+                            <constraint firstItem="PMp-jD-QJr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUp-g8-2qx"/>
+                            <constraint firstItem="PMp-jD-QJr" firstAttribute="top" secondItem="VlT-dd-P1R" secondAttribute="bottom" constant="8" id="fze-FP-GRI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="aXo-rQ-90D" id="iYe-fU-0Si"/>
+                        <outlet property="progressView" destination="VlT-dd-P1R" id="eEW-EN-2aE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="421"/>
+        </scene>
+    </scenes>
+</document>
